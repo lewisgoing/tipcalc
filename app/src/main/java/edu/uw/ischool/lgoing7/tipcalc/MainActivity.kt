@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         buttonCalculateTip = findViewById(R.id.buttonCalculateTip)
         spinnerTipPercentage = findViewById(R.id.spinnerTipPercentage)
 
-        // setup dropdown for tip percentages
+        // dropdown for tip percentages
         val percentages = arrayOf("10%", "15%", "18%", "20%")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, percentages)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
-        // calc tip on button click
+        // calculate tip on button click and send toast
         buttonCalculateTip.setOnClickListener {
             val amount = editTextAmount.text.toString().toDoubleOrNull() ?: return@setOnClickListener
             val selectedPercentage = spinnerTipPercentage.selectedItem.toString().removeSuffix("%").toDouble()
