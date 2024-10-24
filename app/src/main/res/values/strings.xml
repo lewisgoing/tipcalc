@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">tipcalc</string>
+    <string name="tip">Tip</string>
+    <string name="amount">Amount</string>
 </resources>
